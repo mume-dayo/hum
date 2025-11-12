@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mega-file-manager
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MEGA_EMAIL
+        sync: false
+      - key: MEGA_PASSWORD
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: PORT
+        value: 10000
